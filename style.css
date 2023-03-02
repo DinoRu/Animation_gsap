@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&display=swap");
+@font-face {
+  font-family: "Messapia";
+  src: url("./Messapia-Regular.otf");
+}
+
+body {
+  background-color: #384448;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Messapia";
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  overflow-y: hidden;
+}
+
+.text {
+  width: 50%;
+  height: 100vh;
+  align-items: center;
+  display: flex;
+  padding: 15px 15px 15px 100px;
+}
+
+.text h1 {
+  font-size: 70px;
+  line-height: 84px;
+  color: #ffe63e;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.text p {
+  font-size: 20px;
+  color: #fbf7db;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-top: 15px;
+}
+
+.text .btn {
+  position: relative;
+  display: inline-block;
+  width: 250px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  border: 1px solid #ffe63e;
+  color: #ffe63e;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-top: 80px;
+  font-size: 16px;
+  letter-spacing: 4px;
+  transition: all ease 0.5s;
+  overflow: hidden;
+}
+
+.text .btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  transition: all ease 0.5s;
+  background-color: #ffe63e;
+}
+
+.text .btn:hover {
+  font-weight: 700;
+  color: #38444b;
+}
+
+.text .btn:hover::before {
+  left: 0;
+}
+
+.socials {
+  bottom: 100px;
+  margin-top: 200px;
+  position: absolute;
+  bottom: 50px;
+}
+
+.socials a {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  color: #fbf7db;
+  border: 1px solid #53636d;
+  transition: all ease 0.5s;
+  border-radius: 50%;
+  line-height: 50px;
+  text-align: center;
+}
+
+.socials a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffe63e;
+  border-radius: 50%;
+  z-index: -1;
+  transform: scale(0);
+  transition: all ease 0.5s;
+}
+
+.socials a:hover {
+  color: #38444b;
+}
+
+.socials a:hover::before {
+  transform: scale(1);
+}
+
+.img {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.img img {
+  width: 100%;
+  margin: 15px;
+}
+
+.img .img-stripe {
+  width: calc(50% - 15px);
+}
+
+.img .stripe-1 {
+  animation: stripe-one 60s ease 0s infinite;
+}
+
+@keyframes stripe-one {
+  50% {
+    transform: translateY(-200%);
+  }
+}
+
+.img .stripe-2 {
+  transform: translateY(-200%);
+  animation: stripe-two 60s ease 0s infinite;
+}
+
+@keyframes stripe-two {
+  50% {
+    transform: translateY(0%);
+  }
+}
+
+/* Toggle button */
+.toggleBtn {
+  width: 100px;
+  height: 90px;
+  padding: 22px 25px;
+  background-color: #ffe63e;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-bottom-right-radius: 100px;
+  z-index: 10;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.toggleBtn img {
+  position: absolute;
+}
+
+.toggleBtn .close-icon {
+  opacity: 0;
+}
+
+/* menu */
+.menu {
+  width: 50%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  border-radius: 0 0 100% 0;
+  background-color: #ffe63e;
+  transform: scale(0);
+  transform-origin: top left;
+}
+
+nav {
+  padding: 100px;
+  transition: all ease 0.5s;
+}
+
+nav ul {
+  padding-left: 0;
+}
+
+nav ul li {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+nav ul li a {
+  position: relative;
+  font-family: "Messapia";
+  font-size: 40px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #38444b;
+  z-index: 9000;
+}
+
+nav ul li a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -100%;
+  width: 0;
+  height: 3px;
+  background-color: #38444b;
+  transition: all ease 0.5s;
+}
+
+nav ul li a:hover::before {
+  width: 100%;
+  left: 0;
+}
